@@ -25,7 +25,7 @@ requirements = [line for line in requirements_lines
 setup(
     name='bnpmodeling',
     version='0.1',
-    description='Development version of BNP tools.',
+    description='Some tools to implement DP models and evaluate sensitivity to the DP prior.',
     author='Runjing Liu, Ryan Giordano',
     author_email='runjing_liu@berkeley.edu',
     packages=find_packages(exclude=['docs', 'tests']),

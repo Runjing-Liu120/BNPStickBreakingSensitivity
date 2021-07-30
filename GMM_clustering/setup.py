@@ -16,9 +16,9 @@ else:
 
 
 setup(
-    name='bnpgmm_',
+    name='bnpgmm',
     version='0.1',
-    description='Development version of GMM clustering scripts with BNP.',
+    description='Implements a BNP-GMM clustering using variational Bayes and evaluates sensitivity to the BNP prior. ',
     author='Runjing Liu, Ryan Giordano',
     author_email='runjing_liu@berkeley.edu',
     packages=find_packages(exclude=['docs', 'tests']),
