@@ -1,17 +1,16 @@
 # BNP sensitivity
 
-This repo contains code to reproduce the experiments found in our manuscript _arXiv link coming soon_.
+This repo contains code to reproduce the experiments found in our manuscript
 
 Ryan Giordano, Runjing Liu, Michael I. Jordan, Tamara Broderick.
 "Evaluating sensitivity to the Stick Breaking Prior in Bayesian Nonparametrics."
-*arXiv link coming soon*
+[https://arxiv.org/abs/2107.03584](https://arxiv.org/abs/2107.03584)
 
-
-We evaluated local sensitivity to three data analysis problems:
+We evaluated local sensitivity on three data analysis problems:
 
 1. a Gaussian mixture model of the canonical iris data set;
 2. a regression model of time-course gene expression data;
-3. and a topic model for inferring population structure from genetic data.
+3. and a topic model inferring population structure from genetic data.
 
 ## Installation
 
