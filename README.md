@@ -36,20 +36,15 @@ respectively.
 The results presented in our main paper are produced entirely within Jupyter notebooks.
 In each expreriment folder (`./GMM_clustering/`, `GMM_regression_clustering` and `./structure/`),
 the `jupyter` subfolder contains notebooks to reproduce our results.
-Specifically, see the `main_*.ipynb` files.  
 
-For example, the [./GMM_clustering/jupyter/main_functional_sensitivity.ipynb](https://github.com/Runjing-Liu120/BNP_sensitivity/blob/master/GMM_clustering/jupyter/main_functional_sensitivity.ipynb)
-file reproduces the functional sensitivity results for our GMM/iris epxeriment (Figure 6 in the paper).
+For example, the [./GMM_clustering/jupyter/parametric_sensitivity.ipynb](https://github.com/Runjing-Liu120/BNP_sensitivity/blob/master/GMM_clustering/jupyter/parametric_sensitivity.ipynb)
+file reproduces the parametric sensitivity results for our GMM/iris epxeriment (Figure 2 in the paper).
 
 <figure>
-<img src="./writing/journal_paper/figure/iris_fsens-1.png" width="600" height="600" />
+<img src="./figures/iris_parametric_sens.png" width="600" height="250" />
     <figcaption>
-        The sensitivity of the expected number of in-sample clusters in the iris
-data set to three multiplicative perturbations. (Left) the
-multiplicative perturbation in grey. The influence function in purple
-(Middle) the original prior density p0
-and the perturbed prior density p1. (Right) the
-effect of the perturbation on the change in expected number of in-sample
-clusters.
+        The expectd number of in-sample clusters (left) and the expected number of predictive cluster (right) 
+        as a function of the GEM concentration parameter. In red is the linear approximation, while in blue 
+        are results from re-fitting the variational approxmation. 
     </figcaption>
 </figure>
