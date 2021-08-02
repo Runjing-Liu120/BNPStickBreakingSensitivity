@@ -37,7 +37,7 @@ The results presented in our main paper are produced entirely within Jupyter not
 In each expreriment folder (`./GMM_clustering/`, `GMM_regression_clustering` and `./structure/`),
 the `jupyter` subfolder contains notebooks to reproduce our results.
 
-For example, the [./GMM_clustering/jupyter/parametric_sensitivity.ipynb](https://github.com/Runjing-Liu120/BNP_sensitivity/blob/master/GMM_clustering/jupyter/parametric_sensitivity.ipynb)
+For example, the [./GMM_clustering/jupyter/parametric_sensitivity.ipynb](https://github.com/Runjing-Liu120/BNPStickBreakingSensitivity/blob/main/GMM_clustering/jupyter/parametric_sensitivity.ipynb)
 file reproduces the parametric sensitivity results for our GMM/iris epxeriment (Figure 2 in the paper).
 
 <figure>
