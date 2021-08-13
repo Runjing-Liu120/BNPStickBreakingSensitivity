@@ -1,3 +1,5 @@
+import numpy as onp
+
 import jax
 import jax.numpy as np
 import jax.scipy as sp
@@ -13,11 +15,11 @@ from bnpreg.genomics_utils import spline_bases_lib
 import unittest
 
 
-# get data
-# TODO: replace this with simulated data
-bnp_data_repo = './../../genomic_time_series_bnp' 
-y, _, _, timepoints = genomics_data_utils.load_genomics_data(bnp_data_repo)
-n_genes = y.shape[0]
+# randomly draw data
+timepoints = np.concatenate([np.ones(3) * i for i in range(14)])
+n_genes = 1000
+y = onp.random.randn(n_genes, len(timepoints))
+y = np.array(y)
 
 # get regressors
 regressors = spline_bases_lib.get_genomics_spline_basis(timepoints,
