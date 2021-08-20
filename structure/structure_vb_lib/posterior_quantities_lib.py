@@ -12,7 +12,7 @@ from bnpmodeling import cluster_quantities_lib, modeling_lib
 ##############
 def get_vb_expectations(vb_params_dict, gh_loc, gh_weights): 
     
-    e_ind_admix = cluster_quantities_lib.get_e_cluster_probabilities(
+    e_ind_admix = cluster_quantities_lib.get_mixture_weights_from_logitnorm_params(
                         vb_params_dict['ind_admix_params']['stick_means'], 
                         vb_params_dict['ind_admix_params']['stick_infos'],
                         gh_loc, gh_weights)
@@ -136,10 +136,11 @@ def get_e_num_ind_per_cluster(vb_params_dict, gh_loc, gh_weights):
     stick_means = vb_params_dict['ind_admix_params']['stick_means']
     stick_infos = vb_params_dict['ind_admix_params']['stick_infos']
     
-    e_ind_admix = cluster_quantities_lib.get_e_cluster_probabilities(stick_means, 
-                                                                     stick_infos, 
-                                                                     gh_loc, 
-                                                                     gh_weights)
+    e_ind_admix = cluster_quantities_lib.\
+                    get_mixture_weights_from_logitnorm_params(stick_means, 
+                                                              stick_infos, 
+                                                              gh_loc, 
+                                                              gh_weights)
     
     return e_ind_admix.sum(0)
 

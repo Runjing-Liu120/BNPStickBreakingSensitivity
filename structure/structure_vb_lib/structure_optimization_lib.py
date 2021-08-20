@@ -80,7 +80,7 @@ def initialize_structure(g_obs,
     # conditional on the ez's 
     def beta_fun(ez_init_n): 
         beta_update1, beta_update2 = \
-            bnp_optim_lib.update_stick_beta_params(ez_init_n.reshape(-1, k_approx), 
+            bnp_optim_lib._update_stick_beta_params(ez_init_n.reshape(-1, k_approx), 
                                                           prior_params_dict['dp_prior_alpha']) 
         return np.stack((beta_update1, beta_update2), axis = -1) 
 
@@ -89,10 +89,9 @@ def initialize_structure(g_obs,
     # finally, convert these beta sticks to logitnormal sticks
     vb_params_dict['ind_admix_params'] = \
         bnp_optim_lib.convert_beta_sticks_to_logitnormal(ind_stick_betas,
-                                                            vb_params_dict['ind_admix_params'],
-                                                            vb_params_paragami['ind_admix_params'],
-                                                            gh_loc, 
-                                                            gh_weights)[0]
+                                                         vb_params_paragami['ind_admix_params'],
+                                                         gh_loc, 
+                                                         gh_weights)[0]
     
     return vb_params_dict
 

@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import colorsys
 
-from bnpmodeling_runjingdev import modeling_lib, cluster_quantities_lib
+from bnpmodeling import modeling_lib, cluster_quantities_lib
 
 def plot_admixture(admixture, ax, colors = None):
     # copied over form distruct.py file in faststructure
