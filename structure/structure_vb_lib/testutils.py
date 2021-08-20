@@ -13,10 +13,12 @@ def draw_data_and_construct_model(n_obs = 5,
                                   seed = 4525):
     # draw data
     g_obs = data_utils.draw_data(n_obs, n_loci, n_pop)[0]
+    
+    n_allele = g_obs.shape[-1]
 
     # prior parameters
     _, prior_params_paragami = \
-        structure_model_lib.get_default_prior_params()
+        structure_model_lib.get_default_prior_params(n_allele)
     prior_params_dict = \
         prior_params_paragami.random(key=jax.random.PRNGKey(seed))
 
@@ -28,9 +30,9 @@ def draw_data_and_construct_model(n_obs = 5,
         structure_model_lib.\
             get_vb_params_paragami_object(n_obs, 
                                           n_loci,
+                                          n_allele,
                                           k_approx,
-                                          use_logitnormal_sticks, 
-                                          seed = seed)
+                                          prng_key = jax.random.PRNGKey(seed))
     
     return g_obs, vb_params_dict, vb_params_paragami, \
             prior_params_dict, gh_loc, gh_weights

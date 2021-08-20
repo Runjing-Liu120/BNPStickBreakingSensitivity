@@ -4,8 +4,8 @@ import jax.scipy as sp
 
 import paragami
 
-from bnpmodeling_runjingdev import modeling_lib
-from bnpmodeling_runjingdev.stick_integration_lib import get_e_log_logitnormal
+from bnpmodeling import modeling_lib
+from bnpmodeling.stick_integration_lib import get_e_log_logitnormal
 
 from numpy.polynomial.hermite import hermgauss
 

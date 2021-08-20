@@ -8,8 +8,8 @@ import paragami
 from structure_vb_lib.structure_model_lib import get_kl, get_e_loglik_gene_nlk
 from structure_vb_lib.posterior_quantities_lib import get_optimal_z_from_vb_dict
 
-import bnpmodeling_runjingdev.bnp_optimization_lib as bnp_optim_lib
-from bnpmodeling_runjingdev.modeling_lib import get_e_log_dirichlet
+import bnpmodeling.bnp_optimization_lib as bnp_optim_lib
+from bnpmodeling.modeling_lib import get_e_log_dirichlet
 
 def initialize_structure(g_obs, 
                          vb_params_dict, 

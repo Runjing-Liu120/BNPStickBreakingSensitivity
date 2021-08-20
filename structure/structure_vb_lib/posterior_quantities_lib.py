@@ -4,7 +4,7 @@ import jax.scipy as sp
 
 from structure_vb_lib import structure_model_lib 
 
-from bnpmodeling_runjingdev import cluster_quantities_lib, modeling_lib
+from bnpmodeling import cluster_quantities_lib, modeling_lib
 
 
 ##############
