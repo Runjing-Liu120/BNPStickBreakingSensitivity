@@ -14,9 +14,20 @@ We evaluated local sensitivity on three data analysis problems:
 
 ## Installation
 
-To install the package used for all the models we consider:
+We recommend installing into a virtual environment, e.g. by running
+
 ```
-pip install BNP_modeling
+python3 -m venv venv
+source venv/bin/activate
+```
+
+To install the package used for all the models we consider, change to the
+root directory of the repository, and run
+
+```
+python3 -m pip install --upgrade pip
+python3 -m pip install wheel
+python3 -m pip install -e BNP_modeling
 ```
 
 Dependencies include [jax](https://jax.readthedocs.io/en/latest/index.html) and the [jax branch of paragami](https://github.com/rgiordan/paragami/tree/jax).
@@ -25,11 +36,18 @@ These will be installed automatically with the command above.
 Our iris experiments, mice experiments, and population genetics experiments are contained in the `./GMM_clustering/`, `GMM_regression_clustering`, and `./structure/` folders, respectively. To install libraries specific to those experiments, run
 
 ```
-pip install GMM_clustering
-pip install GMM_regression_cluster
-pip install structure
+python3 -m pip install -e GMM_clustering
+python3 -m pip install -e GMM_regression_clustering
+python3 -m pip install -e structure
 ```
 respectively.
+
+Finally, you need to install a Jupyter kernel for the notebooks.  With
+your virtual environment activated, run
+
+```
+python3 -m ipykernel install --user --name=bnp_sensitivity_public
+```
 
 ## Results
 
@@ -43,8 +61,8 @@ file reproduces the parametric sensitivity results for our GMM/iris epxeriment (
 <figure>
 <img src="./figures/iris_parametric_sens.png" width="600" height="250" />
     <figcaption>
-        The expectd number of in-sample clusters (left) and the expected number of predictive cluster (right) 
-        as a function of the GEM concentration parameter. In red is the linear approximation, while in blue 
-        are results from re-fitting the variational approxmation. 
+        The expectd number of in-sample clusters (left) and the expected number of predictive cluster (right)
+        as a function of the GEM concentration parameter. In red is the linear approximation, while in blue
+        are results from re-fitting the variational approxmation.
     </figcaption>
 </figure>
